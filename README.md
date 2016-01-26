@@ -2,21 +2,30 @@ PointerEvents & PointerEventWrapper
 ===================================
 What is it?
 -----------
-**`PointerEvents`:** (not to be confused with PointerEvent) is an API for handling & binding a PointerEvent, MouseEvent, orTouchEvent in a consist cross browser compatable way. 
+**PointerEvents:** (not to be confused with PointerEvent) is an API for handling & binding a PointerEvent, 
+MouseEvent, orTouchEvent in a consist cross browser compatable way. 
 
-**`PointerEventWrapper`:** A wrapper arround these events so that old and new code can easily interact with them as if they were all the same. This makes adding support for the PointerEvent effortless. Secondly, we add some convenience properties and methods to make these events easier to work with. 
+**PointerEventWrapper:** A wrapper arround these events so that old and new code can easily interact with 
+them as if they were all the same. This makes adding support for the PointerEvent effortless. Secondly, we 
+add some convenience properties and methods to make these events easier to work with. 
 
 Wait, whats a PointerEvent?
 ---------------------------
-**`PointerEvent`:** A new event specificification for describing input devices such as a mouse, pen, or touchscreen interact with the browser.  Currently it's only supported by IE 9+, but most major browsers plan to impliment it in the near future. You can see the full specification [here](https://www.w3.org/TR/pointerevents/).
+**PointerEvent:** A new event specificification for describing how input devices such as a mouse, pen, 
+or a touchscreen interact with the DOM.  Currently it's only supported by IE 9+, but most major browsers 
+plan to impliment it in the near future. You can see the full specification 
+[here](https://www.w3.org/TR/pointerevents/).
 
-**`pointerType` or pointer:** The hardware device initiating the PointerEvent. Currently the pointerType can be a touch, mouse, or pen.
+**pointerType or pointer:** The hardware device initiating the PointerEvent. Currently the pointerType 
+can be a touch, mouse, or pen.
 
-**action:** The action initiating the PointerEvent, such as "down" in "pointerdown".  The other possible actions are "up", "move", "over", "out", "cancel", "enter", & "leave". 
+**action:** The action initiating the PointerEvent, such as "down" in "pointerdown".  The other possible 
+actions are "up", "move", "over", "out", "cancel", "enter", & "leave". 
 
 Why use PointerEventWrapper?
 ----------------------------
-The api is easy to use, compatible with all browsers, noramlizes these events, and will save you time is many ways. Here are few example of to use the PointerEvens api.
+The api is easy to use, compatible with all browsers, noramlizes these events, and will save you time is 
+many ways. Here are few example of to use the PointerEvens api.
 
 Examples:
 --------
