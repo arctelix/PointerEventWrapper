@@ -7,7 +7,9 @@ MouseEvent, orTouchEvent in a consist cross browser compatable way.
 
 **PointerEventWrapper:** A wrapper arround these events so that old and new code can easily interact with 
 them as if they were all the same. This makes adding support for the PointerEvent effortless. Secondly, we 
-add some convenience properties and methods to make these events easier to work with. 
+add some convenience properties and methods to make these events easier to work with.
+
+Just incase you were wondering, it's only 4.4kb minified.
 
 Wait, whats a PointerEvent?
 ---------------------------

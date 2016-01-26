@@ -329,7 +329,7 @@ var PointerEvents = new function (){
                 var exIds = []
                 for (var id in points){
                     if (id in ['array', 'length']) continue
-                    console.log('test is primary for id:' + i)
+                    //console.log('test is primary for id:' + i)
                     var point = points[id]
                     if (point.pointerType == this.eType)
                         exIds.push(parseInt(point.pointerId))
