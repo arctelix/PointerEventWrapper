@@ -92,12 +92,14 @@ var PointerEvents = new function (){
         /**
          * The action performed by the event.
          * A non PointerEvent action (suffix) will be converted to a PointerType action
+         * TODO: This should be renamed pointerAction since it is always converted
          * ie: touchstart -> down
          * @type {string}
          */
         this.eAction        = action
         /**
          * The pointerType or the original event type (prefix) ex: touchstart -> touch (not modified)
+         * TODO: This should be renamed eventType
          * @type {string}
          */
         this.eType         = ''
@@ -108,6 +110,7 @@ var PointerEvents = new function (){
         this.eventTypes     = []
         /**
          * The pointer type responsible for the pointerEvent.
+         * TODO: should always be populated with pointerType || eType
          * @type {string}
          */
         this.pointerType    = ''
@@ -310,7 +313,6 @@ var PointerEvents = new function (){
 
             // For TouchEvent support on PointerEvent and nonPointerEvent browsers
             if(this.isTouch) {
-                p.identifier = p.pointerId
                 this.changedTouches = changedPoints
                 this.touches = touchesArray
             }
@@ -321,14 +323,14 @@ var PointerEvents = new function (){
 
 
         /**
-         * Adds PointerEvent Properties to a non pointer Events & modifies PointerEvent properties.
+         * Adds PointerEvent Properties to non pointer Events & modifies PointerEvent properties.
          * @param newPoint
          * @private
          */
         function addPointerProps(newPoint){
             var p = newPoint
             // Assigning eType as pointerId when there is no pointerId
-            // means it's not a PointerEvent or any kind of touch
+            // means there can only be one at a time
             p.pointerId = p.pointerId || p.identifier || this.eType
             p.pointerType = this.pointerType || this.eType
             p.isPrimary = isPrimary.call(this, p)
@@ -337,10 +339,13 @@ var PointerEvents = new function (){
             p.pressure = p.pressure || 0
             p.tiltX = p.tiltX || 0
             p.tiltY = p.tiltY || 0
+            // For TouchEvent support on PointerEvent and nonPointerEvent browsers
+            if(this.isTouch)
+                p.identifier = p.pointerId
         }
 
         function isPrimary(newPoint){
-            if (newPoint.isPrimary !== 'undefined') newPoint.isPrimary
+            if (newPoint.isPrimary !== 'undefined') return newPoint.isPrimary
 
             // Mouse is always primary
             if (this.eType == 'mouse')
@@ -363,7 +368,7 @@ var PointerEvents = new function (){
                 if (newPoint.pointerId == this.eType)
                     return true
                 // primary if pointerId equal to lowest id
-                if (newPoint.pointerId == Math.min.apply(Math,_array))
+                if (newPoint.pointerId == Math.min.apply(Math,exIds))
                     return true
             }
 
