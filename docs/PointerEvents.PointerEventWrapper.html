@@ -31,34 +31,7 @@
         <h2>
             <span class="ancestors"><a href="PointerEvents.html">PointerEvents</a>.</span>PointerEventWrapper</h2>
         
-            <div class="class-description"><p>A wrapper around a pointer like event which provides a constant set of properties across browsers and
-event types as well as some added value.</p>
-<p>Similar to <code>touchEvent.touches</code> and <code>touchEvent.changedTouches</code>, we implemented points and currentPoints. Since
-the pointerEvent has no similar properties, this is a way to provide some utility that we became accustomed to
-when working with pointerEvents. There are a few notable differences in the latter:</p>
-<ul>
-<li><p><strong><code>PointerEventWrapper.points</code>:</strong> is an object indexed by a pointerId rather than an array like <code>touchEvent.touches</code>.
-This was a necessary change as PointerEvents provide a pointerId that does not start from zero.</p>
-</li>
-<li><p><strong><code>PointerEventWrapper.points</code>:</strong> Are updated at the end of a change event rather than at the start.  This
-way the previous state of a changedPoint will always be available in points.</p>
-</li>
-<li><p><strong><code>PointerEventWrapper.changedPoints</code>:</strong>  continue to use zero based indexing like <code>touchEvent.changedTouches</code>.
-This way you can still easily loop through changedTouches or work with only the first touch.</p>
-</li>
-<li><p><strong><code>PointerEventWrapper.changedPoints</code>:</strong>  Contain a few extra properties such as <code>.deltaX</code> and <code>.deltaY</code>
-which are calculated base on the previous client position of a changed touch.</p>
-</li>
-<li><p><strong><code>PointerEventWrapper.touches</code> &amp; <code>PointerEventWrapper.changedTouches</code>:</strong> Are equivalent to the
-old PointerEvent implementations for backwards compatibility with TouchEvents.</p>
-</li>
-</ul>
-<blockquote>
-<p>NOTE: touches and changedTouches should be considered depreciated and will be removed eventually.</p>
-<p>IMPORTANT: <code>isTouch</code> will always be accurate.  However, most TouchEvents are accompanied by
-fake MouseEvents in browsers that do not natively support the PointerEvent.  Therefor <code>isMouse</code> &amp; <code>isPen</code>
-will always be <code>undefined</code> in these browsers.  Use <code>isTouch</code> for most cases.</p>
-</blockquote></div>
+            <div class="class-description">A wrapper around a pointer like event which provides a constant set of properties across browsers andevent types as well as some added value.Similar to `touchEvent.touches` and `touchEvent.changedTouches`, we implemented points and currentPoints. Sincethe pointerEvent has no similar properties, this is a way to provide some utility that we became accustomed towhen working with pointerEvents. There are a few notable differences in the latter:- **`PointerEventWrapper.points`:** is an object indexed by a pointerId rather than an array like `touchEvent.touches`.  This was a necessary change as PointerEvents provide a pointerId that does not start from zero.- **`PointerEventWrapper.points`:** Are updated at the end of a change event rather than at the start.  This  way the previous state of a changedPoint will always be available in points.- **`PointerEventWrapper.changedPoints`:**  continue to use zero based indexing like `touchEvent.changedTouches`.  This way you can still easily loop through changedTouches or work with only the first touch.- **`PointerEventWrapper.changedPoints`:**  Contain a few extra properties such as `.deltaX` and `.deltaY`  which are calculated base on the previous client position of a changed touch.- **`PointerEventWrapper.touches` & `PointerEventWrapper.changedTouches`:** Are equivalent to the  old PointerEvent implementations for backwards compatibility with TouchEvents.>NOTE: touches and changedTouches should be considered depreciated and will be removed eventually.>IMPORTANT: `isTouch` will always be accurate.  However, most TouchEvents are accompanied byfake MouseEvents in browsers that do not natively support the PointerEvent.  Therefor `isMouse` & `isPen`will always be `undefined` in these browsers.  Use `isTouch` for most cases.</div>
         
     
 </header>
@@ -79,7 +52,7 @@ will always be <code>undefined</code> in these browsers.  Use <code>isTouch</cod
 
 
 <div class="description">
-    <p>This class is returned by <code>PointerEvents.parse</code>.</p>
+    This class is returned by `PointerEvents.parse`.
 </div>
 
 
@@ -134,7 +107,7 @@ will always be <code>undefined</code> in these browsers.  Use <code>isTouch</cod
 
             
 
-            <td class="description last"><p>An Event object or action (event suffix as a string).</p></td>
+            <td class="description last">An Event object or action (event suffix as a string).</td>
         </tr>
 
     
@@ -157,7 +130,7 @@ will always be <code>undefined</code> in these browsers.  Use <code>isTouch</cod
 
             
 
-            <td class="description last"><p>Array of permitted prefixes for this instance.</p></td>
+            <td class="description last">Array of permitted prefixes for this instance.</td>
         </tr>
 
     
@@ -198,7 +171,7 @@ will always be <code>undefined</code> in these browsers.  Use <code>isTouch</cod
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pointerEventWrapper.js.html">pointerEventWrapper.js</a>, <a href="pointerEventWrapper.js.html#line47">line 47</a>
+        <a href="PointerEventWrapper.js.html">PointerEventWrapper.js</a>, <a href="PointerEventWrapper.js.html#line61">line 61</a>
     </li></ul></dd>
     
 
@@ -266,11 +239,7 @@ will always be <code>undefined</code> in these browsers.  Use <code>isTouch</cod
 
 
 <div class="description">
-    <p>Array of points triggering this event.</p>
-<p>Points contain the original event's properties as well as all PointerEvent
-properties weather the original event was a PointerEvent or not.</p>
-<p>Use <a href="PointerEvents.PointerEventWrapper.html#points">points</a> [changedPoint.pointerId]
-to access the previous state of each point.</p>
+    Array of points triggering this event.Points contain the original event's properties as well as all PointerEventproperties weather the original event was a PointerEvent or not.Use <a href="PointerEvents.PointerEventWrapper.html#points">points</a> [changedPoint.pointerId]to access the previous state of each point.
 </div>
 
 
@@ -318,7 +287,7 @@ to access the previous state of each point.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pointerEventWrapper.js.html">pointerEventWrapper.js</a>, <a href="pointerEventWrapper.js.html#line157">line 157</a>
+        <a href="PointerEventWrapper.js.html">PointerEventWrapper.js</a>, <a href="PointerEventWrapper.js.html#line171">line 171</a>
     </li></ul></dd>
     
 
@@ -342,10 +311,7 @@ to access the previous state of each point.</p>
 
 
 <div class="description">
-    <p>Array of touches triggering this event (mimics <code>TouchEvent.changedTouches</code>).</p>
-<blockquote>
-<p>DEPRECIATED: This property is depreciated and will be removed eventually.</p>
-</blockquote>
+    Array of touches triggering this event (mimics `TouchEvent.changedTouches`).>DEPRECIATED: This property is depreciated and will be removed eventually.
 </div>
 
 
@@ -393,7 +359,7 @@ to access the previous state of each point.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pointerEventWrapper.js.html">pointerEventWrapper.js</a>, <a href="pointerEventWrapper.js.html#line126">line 126</a>
+        <a href="PointerEventWrapper.js.html">PointerEventWrapper.js</a>, <a href="PointerEventWrapper.js.html#line140">line 140</a>
     </li></ul></dd>
     
 
@@ -417,9 +383,7 @@ to access the previous state of each point.</p>
 
 
 <div class="description">
-    <p>The action performed by the event.
-A non PointerEvent action (suffix) will be converted to a PointerType action
-ie: touchstart -&gt; down</p>
+    The action performed by the event.A non PointerEvent action (suffix) will be converted to a PointerType actionie: touchstart -> down
 </div>
 
 
@@ -467,7 +431,7 @@ ie: touchstart -&gt; down</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pointerEventWrapper.js.html">pointerEventWrapper.js</a>, <a href="pointerEventWrapper.js.html#line74">line 74</a>
+        <a href="PointerEventWrapper.js.html">PointerEventWrapper.js</a>, <a href="PointerEventWrapper.js.html#line88">line 88</a>
     </li></ul></dd>
     
 
@@ -491,7 +455,7 @@ ie: touchstart -&gt; down</p>
 
 
 <div class="description">
-    <p>The pointerType or the original event type (prefix) ex: touchstart -&gt; touch (not modified)</p>
+    The pointerType or the original event type (prefix) ex: touchstart -> touch (not modified)
 </div>
 
 
@@ -539,7 +503,7 @@ ie: touchstart -&gt; down</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pointerEventWrapper.js.html">pointerEventWrapper.js</a>, <a href="pointerEventWrapper.js.html#line79">line 79</a>
+        <a href="PointerEventWrapper.js.html">PointerEventWrapper.js</a>, <a href="PointerEventWrapper.js.html#line93">line 93</a>
     </li></ul></dd>
     
 
@@ -563,7 +527,7 @@ ie: touchstart -&gt; down</p>
 
 
 <div class="description">
-    <p>The eventTypes permitted for this instance.</p>
+    The eventTypes permitted for this instance.
 </div>
 
 
@@ -611,7 +575,7 @@ ie: touchstart -&gt; down</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pointerEventWrapper.js.html">pointerEventWrapper.js</a>, <a href="pointerEventWrapper.js.html#line84">line 84</a>
+        <a href="PointerEventWrapper.js.html">PointerEventWrapper.js</a>, <a href="PointerEventWrapper.js.html#line98">line 98</a>
     </li></ul></dd>
     
 
@@ -635,7 +599,7 @@ ie: touchstart -&gt; down</p>
 
 
 <div class="description">
-    <p>PointerEvent is natively supported by browser.</p>
+    PointerEvent is natively supported by browser.
 </div>
 
 
@@ -683,7 +647,7 @@ ie: touchstart -&gt; down</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pointerEventWrapper.js.html">pointerEventWrapper.js</a>, <a href="pointerEventWrapper.js.html#line62">line 62</a>
+        <a href="PointerEventWrapper.js.html">PointerEventWrapper.js</a>, <a href="PointerEventWrapper.js.html#line76">line 76</a>
     </li></ul></dd>
     
 
@@ -707,11 +671,7 @@ ie: touchstart -&gt; down</p>
 
 
 <div class="description">
-    <p>Test for a confirmed mouse Event.</p>
-<blockquote>
-<p>WARNING: The value will always be <code>undefined</code> when the PointerEvent is not
-natively supported by the browser.</p>
-</blockquote>
+    Test for a confirmed mouse Event.>WARNING: The value will always be `undefined` when the PointerEvent is notnatively supported by the browser.
 </div>
 
 
@@ -759,7 +719,7 @@ natively supported by the browser.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pointerEventWrapper.js.html">pointerEventWrapper.js</a>, <a href="pointerEventWrapper.js.html#line109">line 109</a>
+        <a href="PointerEventWrapper.js.html">PointerEventWrapper.js</a>, <a href="PointerEventWrapper.js.html#line123">line 123</a>
     </li></ul></dd>
     
 
@@ -783,11 +743,7 @@ natively supported by the browser.</p>
 
 
 <div class="description">
-    <p>Test for a confirmed pen Event.</p>
-<blockquote>
-<p>NOTE: The value will always be <code>undefined</code> when the PointerEvent is not
-natively supported by the browser.</p>
-</blockquote>
+    Test for a confirmed pen Event.>NOTE: The value will always be `undefined` when the PointerEvent is notnatively supported by the browser.
 </div>
 
 
@@ -835,7 +791,7 @@ natively supported by the browser.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pointerEventWrapper.js.html">pointerEventWrapper.js</a>, <a href="pointerEventWrapper.js.html#line102">line 102</a>
+        <a href="PointerEventWrapper.js.html">PointerEventWrapper.js</a>, <a href="PointerEventWrapper.js.html#line116">line 116</a>
     </li></ul></dd>
     
 
@@ -859,7 +815,7 @@ natively supported by the browser.</p>
 
 
 <div class="description">
-    <p>Test for a native PointerEvent</p>
+    Test for a native PointerEvent
 </div>
 
 
@@ -907,7 +863,7 @@ natively supported by the browser.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pointerEventWrapper.js.html">pointerEventWrapper.js</a>, <a href="pointerEventWrapper.js.html#line114">line 114</a>
+        <a href="PointerEventWrapper.js.html">PointerEventWrapper.js</a>, <a href="PointerEventWrapper.js.html#line128">line 128</a>
     </li></ul></dd>
     
 
@@ -931,10 +887,7 @@ natively supported by the browser.</p>
 
 
 <div class="description">
-    <p>Test for a confirmed touch Event.</p>
-<blockquote>
-<p>NOTE: This property will always accurately reflect the presence of a touch.</p>
-</blockquote>
+    Test for a confirmed touch Event.>NOTE: This property will always accurately reflect the presence of a touch.
 </div>
 
 
@@ -982,7 +935,7 @@ natively supported by the browser.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pointerEventWrapper.js.html">pointerEventWrapper.js</a>, <a href="pointerEventWrapper.js.html#line95">line 95</a>
+        <a href="PointerEventWrapper.js.html">PointerEventWrapper.js</a>, <a href="PointerEventWrapper.js.html#line109">line 109</a>
     </li></ul></dd>
     
 
@@ -1006,7 +959,7 @@ natively supported by the browser.</p>
 
 
 <div class="description">
-    <p>The original unmodified browser event.</p>
+    The original unmodified browser event.
 </div>
 
 
@@ -1054,7 +1007,7 @@ natively supported by the browser.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pointerEventWrapper.js.html">pointerEventWrapper.js</a>, <a href="pointerEventWrapper.js.html#line67">line 67</a>
+        <a href="PointerEventWrapper.js.html">PointerEventWrapper.js</a>, <a href="PointerEventWrapper.js.html#line81">line 81</a>
     </li></ul></dd>
     
 
@@ -1078,7 +1031,7 @@ natively supported by the browser.</p>
 
 
 <div class="description">
-    <p>The pointer type responsible for the pointerEvent.</p>
+    The pointer type responsible for the pointerEvent.
 </div>
 
 
@@ -1126,7 +1079,7 @@ natively supported by the browser.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pointerEventWrapper.js.html">pointerEventWrapper.js</a>, <a href="pointerEventWrapper.js.html#line89">line 89</a>
+        <a href="PointerEventWrapper.js.html">PointerEventWrapper.js</a>, <a href="PointerEventWrapper.js.html#line103">line 103</a>
     </li></ul></dd>
     
 
@@ -1150,16 +1103,7 @@ natively supported by the browser.</p>
 
 
 <div class="description">
-    <p>Object containing all the points currently in contact withe the surface.
-If this event was triggered by removal of a point, the removed point will still exist.
-Each point is indexed by it's pointerId.</p>
-<p>Points contain the original event's properties as well as all PointerEvent
-properties weather the original event was a PointerEvent or not.</p>
-<p>Use <a href="PointerEvents.PointerEventWrapper.html#changedTouches">changedTouches</a> to access the points triggering this event.</p>
-<blockquote>
-<p>USAGE NOTE: This object differs from TouchEvent.touches which is an array and indexes
-always start at zero and removed points do not exist.</p>
-</blockquote>
+    Object containing all the points currently in contact withe the surface.If this event was triggered by removal of a point, the removed point will still exist.Each point is indexed by it's pointerId.Points contain the original event's properties as well as all PointerEventproperties weather the original event was a PointerEvent or not.Use <a href="PointerEvents.PointerEventWrapper.html#changedTouches">changedTouches</a> to access the points triggering this event.>USAGE NOTE: This object differs from TouchEvent.touches which is an array and indexesalways start at zero and removed points do not exist.
 </div>
 
 
@@ -1220,7 +1164,7 @@ always start at zero and removed points do not exist.</p>
 
             
 
-            <td class="description last"><p>The quantity of points in contact.</p></td>
+            <td class="description last">The quantity of points in contact.</td>
         </tr>
 
     
@@ -1243,7 +1187,7 @@ always start at zero and removed points do not exist.</p>
 
             
 
-            <td class="description last"><p>All points in contact as an array rather than on object.</p></td>
+            <td class="description last">All points in contact as an array rather than on object.</td>
         </tr>
 
     
@@ -1266,7 +1210,7 @@ always start at zero and removed points do not exist.</p>
 
             
 
-            <td class="description last"><p>each point will be indexed by it's unique pointerId.</p></td>
+            <td class="description last">each point will be indexed by it's unique pointerId.</td>
         </tr>
 
     
@@ -1305,7 +1249,7 @@ always start at zero and removed points do not exist.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pointerEventWrapper.js.html">pointerEventWrapper.js</a>, <a href="pointerEventWrapper.js.html#line145">line 145</a>
+        <a href="PointerEventWrapper.js.html">PointerEventWrapper.js</a>, <a href="PointerEventWrapper.js.html#line159">line 159</a>
     </li></ul></dd>
     
 
@@ -1329,10 +1273,7 @@ always start at zero and removed points do not exist.</p>
 
 
 <div class="description">
-    <p>Array of touches currently in contact with the surface (mimics <code>TouchEvent.touches</code>).</p>
-<blockquote>
-<p>DEPRECIATED: This property is depreciated and will be removed eventually.</p>
-</blockquote>
+    Array of touches currently in contact with the surface (mimics `TouchEvent.touches`).>DEPRECIATED: This property is depreciated and will be removed eventually.
 </div>
 
 
@@ -1380,7 +1321,7 @@ always start at zero and removed points do not exist.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pointerEventWrapper.js.html">pointerEventWrapper.js</a>, <a href="pointerEventWrapper.js.html#line120">line 120</a>
+        <a href="PointerEventWrapper.js.html">PointerEventWrapper.js</a>, <a href="PointerEventWrapper.js.html#line134">line 134</a>
     </li></ul></dd>
     
 
@@ -1420,7 +1361,7 @@ always start at zero and removed points do not exist.</p>
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Mon Jan 25 2016 21:59:40 GMT-0500 (Eastern Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Mon Jan 25 2016 22:36:17 GMT-0500 (Eastern Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>
