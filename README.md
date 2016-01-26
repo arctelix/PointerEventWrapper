@@ -27,7 +27,7 @@ actions are "up", "move", "over", "out", "cancel", "enter", & "leave".
 Why use PointerEventWrapper?
 ----------------------------
 The api is easy to use, compatible with all browsers, noramlizes these events, and will save you time is 
-many ways. Here are few example of to use the PointerEvens api.
+many ways. Here are few example of how to use the PointerEvens API.
 
 Examples:
 --------
