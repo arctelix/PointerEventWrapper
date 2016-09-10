@@ -1,6 +1,6 @@
 {
-  "name": "PointerEventWrapper",
-  "main": "PointerEventWrapper.js",
+  "name": "pointerEventWrapper",
+  "main": "pointerEventWrapper.js",
   "homepage": "https://github.com/arctelix/PointerEventWrapper",
   "authors": [
     "arctelix <arctelix@gmail.com>"
