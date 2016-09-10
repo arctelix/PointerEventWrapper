@@ -6,7 +6,7 @@
  * @namespace
  * @description Provides an api for normalizing, handling, & binding the PointerEvent, MouseEvent, & TouchEvent.
  * See the docs below and {@link PointerEvents.PointerEventWrapper|PointerEventWrapper} for more details.
- *
+ * @version 0.1.0
  * @author Simplex Studio, LTD
  * @copyright Copyright (c) 2016 Simplex Studio, LTD
  * @license The MIT License (MIT)

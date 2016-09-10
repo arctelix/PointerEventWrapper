@@ -1,0 +1,30 @@
+{
+  "name": "PointerEventWrapper",
+  "main": "PointerEventWrapper.js",
+  "homepage": "https://github.com/arctelix/PointerEventWrapper",
+  "authors": [
+    "arctelix <arctelix@gmail.com>"
+  ],
+  "description": "Write less code to create cross browser compatable mouse and touch interactions",
+  "moduleType": [],
+  "keywords": [
+    "PointerEvent",
+    "MouseEvent",
+    "TouchEvent",
+    "cross",
+    "browser",
+    "pollyfill"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "docs",
+    "*.config",
+    "LICENCE",
+    "README.MD"
+  ]
+}
