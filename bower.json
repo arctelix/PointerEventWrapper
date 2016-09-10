@@ -5,7 +5,7 @@
   "authors": [
     "arctelix <arctelix@gmail.com>"
   ],
-  "description": "Write less code to create cross browser compatable mouse and touch interactions",
+  "description": "An api for normalizing, handling, & binding the PointerEvent, MouseEvent, & TouchEvent with less code.",
   "moduleType": [],
   "keywords": [
     "PointerEvent",
